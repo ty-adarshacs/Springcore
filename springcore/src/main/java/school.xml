@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+  <import resource="student.xml"/>
+  
+    <bean class="com.tyss.spring.bean.School" id="school"/>
+    <bean class="com.tyss.spring.bean.School" id="schoolone" >
+    <constructor-arg name="id" value="10"/>
+    <constructor-arg name="sname" value="sara" />
+     <constructor-arg name="studentone" ref="studentone" />
+   
+    </bean>
+    
+    
+     <bean class="com.tyss.spring.bean.School" id="schooltwo">
+   <property name="id" value="20"/>
+    <property name="sname" value="bharat"/>
+    </bean>
+   
+</beans>
